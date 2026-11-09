@@ -1,0 +1,22 @@
+name = "mihomo-sub-manager"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+routes = [
+  { pattern = "mihomo-sub-manager-api.dd66.de", custom_domain = true }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mihomo-sub-manager-db"
+database_id = "c50a437d-e3d7-409f-b7bb-facde9cb2286"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "8afe368585d24988bce8866de593ec0e"
+
+[vars]
+WORKER_URL = "https://mihomo-sub-manager-api.dd66.de"
+ACCESS_TOKEN_TTL = 900
+REFRESH_TOKEN_TTL = 2592000
+SUB_CACHE_TTL = "3600"
